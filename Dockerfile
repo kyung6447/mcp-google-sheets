@@ -30,7 +30,7 @@ RUN uv venv
 FROM base AS builder
 
 COPY . .
-
+RUN uv add "mcp<2"
 RUN uv sync
 
 # Build the project (produces dist/*.whl)
